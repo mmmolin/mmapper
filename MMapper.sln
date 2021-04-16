@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMapper.Application", "MMapper.Application\MMapper.Application.csproj", "{78E531DA-E1E6-4CA4-B9CD-9ACDCB467A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MMapper.Application", "MMapper.Application\MMapper.Application.csproj", "{78E531DA-E1E6-4CA4-B9CD-9ACDCB467A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMapper.Tests", "MMapper.Tests\MMapper.Tests.csproj", "{4AFB467E-EA32-413E-98C4-852F20F4AB4F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMapper.TestConsole", "MMapper.TestConsole\MMapper.TestConsole.csproj", "{BFC14AAD-80C6-4D5A-9F25-010B31E2B96B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MMapper.Tests", "MMapper.Tests\MMapper.Tests.csproj", "{4AFB467E-EA32-413E-98C4-852F20F4AB4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{4AFB467E-EA32-413E-98C4-852F20F4AB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AFB467E-EA32-413E-98C4-852F20F4AB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AFB467E-EA32-413E-98C4-852F20F4AB4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFC14AAD-80C6-4D5A-9F25-010B31E2B96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFC14AAD-80C6-4D5A-9F25-010B31E2B96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFC14AAD-80C6-4D5A-9F25-010B31E2B96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFC14AAD-80C6-4D5A-9F25-010B31E2B96B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

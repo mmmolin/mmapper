@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -11,17 +13,38 @@ namespace MMapper.Application
             var sourceProperties = source.GetType().GetProperties();
             var targetType = typeof(t);
             var targetProperties = targetType.GetProperties();
-            var targetObject = (t)Activator.CreateInstance(targetType);
-            foreach(PropertyInfo prop in sourceProperties)
+            object targetObject = null;
+            foreach (PropertyInfo prop in sourceProperties)
             {
                 if (targetProperties.Any(x => x.Name == prop.Name))
                 {
+                    if (targetObject == null)
+                    {
+                        targetObject = Activator.CreateInstance(targetType);
+                    }
+
                     var sourceValue = prop.GetValue(source);
                     targetObject.GetType().GetProperty(prop.Name).SetValue(targetObject, sourceValue);
+
                 }
             }
-            
-            return targetObject;
+
+            return (t)targetObject;
+        }
+
+        public static IList<t> Map<t>(IEnumerable<object> sources)
+        {
+            var targetObjects = new List<t>();
+            foreach(var source in sources)
+            {
+                var targetObject = Map<t>(source);
+                if(targetObject != null)
+                {
+                    targetObjects.Add(targetObject);
+                }
+            }
+
+            return targetObjects;
         }
     }
 }
